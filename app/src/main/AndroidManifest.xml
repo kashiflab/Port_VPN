@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="elink.vpn.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        android:name="de.blinkt.openvpn.core.ICSOpenVPNApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".SettingsActivity"></activity>
+
+        <service
+            android:name=".SendDataService"
+            android:enabled="true"
+            android:icon="@drawable/logo"
+            android:label="@string/app_name" />
+
+        <activity
+            android:exported="false"
+            android:name=".ContactActivity"
+            android:label="@string/title_activity_contact"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:exported="false"
+            android:name=".BitcoinActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_bitcoin"
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- TODO (1) Add your public key gotten from https://dashboard.paystack.co/#/settings/developer pk_live_bfb3b33f31aec0f30035a57ac77b4ad6a48a346e pk_live_bfb3b33f31aec0f30035a57ac77b4ad6a48a346e -->
+<!--        <meta-data-->
+<!--            android:name="co.paystack.android.PublicKey"-->
+<!--            android:value="pk_live_c52db6a75d73886be2be8f8ad5645de3f2e0d135"/>-->
+<!--        android:value="pk_live_bfb3b33f31aec0f30035a57ac77b4ad6a48a346e"-->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2818856964974442~6058628382" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:exported="false"
+            android:name=".ForgotPassword"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_forgot_password"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:exported="false"
+            android:name=".ChargePaystack"
+            android:screenOrientation="portrait"
+            android:label="Upgrade"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:exported="false"
+            android:name=".FloatingbTn"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_floatingb_tn"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:exported="false"
+            android:name=".BuyPremium"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_buy_premium"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:exported="false"
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:exported="false"
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:exported="false"
+            android:name=".NicknameActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_nickname"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".AppActivity"
+            android:label="@string/title_activity_app"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:exported="false"
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:exported="false"
+            android:name=".VpnActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:exported="false"
+            android:name=".DisconnectVPN"
+            android:screenOrientation="portrait"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:label="@string/disconnect"
+            android:theme="@style/AppTheme.dialog" />
+        <activity
+            android:exported="false"
+            android:name=".DisconnectVPN2"
+            android:screenOrientation="portrait"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:label="@string/disconnect"
+            android:theme="@style/AppTheme.dialog" />
+        <activity
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:name="de.blinkt.openvpn.VpnAuthActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:name="de.blinkt.openvpn.DisconnectVPNActivity"
+            android:excludeFromRecents="true"
+            android:label="Disconnect"
+            android:noHistory="true"
+            android:taskAffinity=".DisconnectVPN"
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
+
+        <service
+            android:name="de.blinkt.openvpn.core.OpenVPNService"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

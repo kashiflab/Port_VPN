@@ -1,0 +1,157 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.14.0'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+apply plugin: 'com.android.application'
+
+/*def openvpn3SwigFiles = new File(buildDir, "generated/source/ovpn3swig/ovpn3")
+
+task("generateOpenVPN3Swig", type: Exec) {
+    doFirst {
+        mkdir openvpn3SwigFiles
+    }
+    commandLine "swig", "-outdir", openvpn3SwigFiles, "-outcurrentdir", "-c++", "-java", "-package", "net.openvpn.ovpn3",
+            "-Isrc/main/cpp/openvpn3/client", "-Isrc/main/cpp/openvpn3/",
+            "-o", "${openvpn3SwigFiles}/ovpncli_wrap.cxx", "-oh", "${openvpn3SwigFiles}/ovpncli_wrap.h",
+            "src/main/cpp/openvpn3/javacli/ovpncli.i"
+    environment 'PATH', "${environment.PATH}:/usr/local/bin/:/usr/sbin/:/sbin:/bin:/bin"
+
+}*/
+
+android {
+    compileSdkVersion 33
+        buildToolsVersion "30.0.3"
+        defaultConfig {
+            applicationId "elink.vpn.app"
+            minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 11
+        versionName "1.0.1"
+
+            buildConfigField("String", "PSTK_PUBLIC_KEY", PSTK_PUBLIC_KEY)
+        externalNativeBuild {
+            cmake {
+                arguments '-DANDROID_TOOLCHAIN=clang',
+                        '-DANDROID_STL=c++_static'
+            }
+        }
+        manifestPlaceholders = [
+                onesignal_app_id               : '2745b1a5-f714-4a06-af18-2c4e0944ac0e',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
+    }
+
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets', 'build/ovpnassets']
+        }
+
+      /*  normal {
+            java.srcDirs = ["src/ovpn3/java/", openvpn3SwigFiles]
+        }*/
+
+    }
+
+    flavorDimensions "implementation"
+    productFlavors {
+        normal {
+            dimension "implementation"
+            buildConfigField 'boolean', 'openvpn3', 'true'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lint {
+        abortOnError false
+    }
+
+}
+
+// Ensure native build is run before assets, so assets are ready to be merged into the apk
+android.applicationVariants.all { variant ->
+    variant.mergeAssets.dependsOn(variant.externalNativeBuildTasks)
+}
+
+/*android.applicationVariants.all { variant ->
+    variant.productFlavors.each {
+        if (it.dimension == 'implementation' && it.name != 'noovpn3')
+            variant.getJavaCompiler().dependsOn(generateOpenVPN3Swig)
+
+    }
+}*/
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+
+    //SlidingUpPannel
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    implementation 'com.onesignal:OneSignal:4.8.5'
+
+    //Material EditText
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    //paystack
+    implementation 'co.paystack.android.design.widget:pinpad:1.0.4'
+    implementation 'co.paystack.android:paystack:3.1.2'
+
+
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.google.firebase:firebase-analytics:21.2.1'
+
+    //sweet alert dialog
+    implementation 'com.github.f0ris.sweetalert:library:1.5.6'
+
+
+    implementation 'com.anjlab.android.iab.v3:library:2.0.3'
+    implementation 'com.codemybrainsout.rating:ratingdialog:1.0.8'
+    implementation 'com.google.firebase:firebase-messaging:23.1.2'
+
+    // ads we didn't dloose code, great
+//    def ads_version = "20.3.0"
+//    implementation "com.google.android.gms:play-services-ads:$ads_version"
+
+    // flutterwave
+    implementation 'com.github.flutterwave.rave-android:rave_android:2.1.38'
+
+    // appodeal
+//    implementation 'com.appodeal.ads:sdk:3.0.0.+'
+
+
+    implementation 'com.google.android.play:app-update:2.0.0'
+
+}
+apply plugin: 'com.google.gms.google-services'

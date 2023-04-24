@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login2bg"
+    tools:context=".BitcoinActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/mota_text"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Smartest and Safest way"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:layout_below="@+id/mota_text"
+                android:text="Please pay and wait for activation"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/the_price_in_usd"
+                android:text="$2"
+                android:fontFamily="@font/montserrat"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/the_price_in_btc"
+                android:text="0.1 BTC"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/montserrat"
+                android:layout_below="@id/the_price_in_usd"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/qr_code"/>
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/qr_code"
+                android:text="Scan To Pay"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Or Transfer Bitcoin to this wallet:"
+                android:textAlignment="center"
+                android:id="@+id/or_transfer"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="xlw"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_below="@+id/or_transfer"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:id="@+id/copy_me"
+                android:clickable="true"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tap address to copy"
+                android:textAlignment="center"
+                android:layout_below="@+id/copy_me"
+                android:id="@+id/click_address_to_copy"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/logincardview"
+            android:layout_marginTop="20dp"
+            android:background="#ebebeb"
+            app:cardCornerRadius="5dp"
+            android:backgroundTint="#ebebeb"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/trans_ref"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:fontFamily="@font/montserrat"
+                    android:textColorHint="#050505"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_action_person"
+                    android:inputType="textEmailAddress"
+                    app:met_floatingLabel="normal" />
+
+                <Button
+                    android:id="@+id/submit_transaction"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#009933"
+                    android:backgroundTint="#050505"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

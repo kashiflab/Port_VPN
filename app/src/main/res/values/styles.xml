@@ -1,0 +1,57 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:alertDialogTheme">@style/AppTheme.alertDialog</item>
+    </style>
+
+    <style name="TextAppearance.Subhead.Bold" parent="@style/TextAppearance.AppCompat.Subhead">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#009933</item>
+        <item name="android:textColorPrimary">#221f3b</item>
+        <item name="android:background">#ebebeb</item>
+    </style>
+
+    <style name="AppTheme.alertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="FlutterWaveTheme" parent="RaveAppTheme.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/bg_welcome_screen_2</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="OTPButtonStyle">@color/bg_welcome_screen_2</item>
+        <item name="PayButtonStyle">@color/bg_welcome_screen_2</item>
+        <item name="PinButtonStyle">@color/bg_welcome_screen_2</item>
+        <item name="OTPHeaderStyle">@color/bg_welcome_screen_2</item>
+        <item name="TabLayoutStyle">@color/bg_welcome_screen_2</item>
+        <item name="PinHeaderStyle">@color/bg_welcome_screen_2</item>
+        <item name="PaymentTileStyle">@color/bg_welcome_screen_2</item>
+        <item name="PaymentTileTextStyle">@color/bg_welcome_screen_2</item>
+        <item name="PaymentTileDividerStyle">@color/bg_welcome_screen_2</item>
+    </style>
+
+</resources>

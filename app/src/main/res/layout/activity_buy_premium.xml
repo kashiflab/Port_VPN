@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_bg_2"
+    tools:context=".BuyPremium">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:paddingTop="20dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Experience Premium Service  When You Upgrade"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_below="@id/title_container"
+            android:layout_height="wrap_content"
+            android:id="@+id/pacage_container"
+            android:layout_weight="40"
+            android:paddingTop="20dp"
+            android:gravity="center_horizontal"
+            >
+
+
+            <LinearLayout
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/pkg_1"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginBottom="20dp"
+                android:weightSum="100"
+                android:background="@drawable/et_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="35"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/sku_1_title"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_1_title" />
+
+                <TextView
+                    android:background="@drawable/save_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sku_1_save"
+                    android:layout_weight="10"
+                    android:paddingLeft="20dp"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_1_saving" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:id="@+id/sku_1_price_title"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textSize="20sp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_1_bill" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="350dp"
+                android:id="@+id/pkg_2"
+                android:layout_below="@id/pkg_1"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginBottom="20dp"
+                android:weightSum="100"
+                android:background="@drawable/et_bg"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="35"
+                    android:paddingLeft="20dp"
+                    android:textSize="18sp"
+                    android:id="@+id/sku_2_title"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_2_title" />
+
+                <TextView
+                    android:background="@drawable/save_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:paddingLeft="20dp"
+                    android:padding="5dp"
+                    android:id="@+id/sku_2_save"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_2_saving" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/sku_2_price_title"
+                    android:paddingRight="20dp"
+                    android:textSize="20sp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_2_bill" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="350dp"
+                android:id="@+id/pkg_3"
+                android:layout_below="@id/pkg_2"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginBottom="20dp"
+                android:weightSum="100"
+                android:background="@drawable/et_bg"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/sku_3_title"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_3_title" />
+
+                <TextView
+                    android:background="@drawable/save_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/sku_3_save"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_3_saving" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:id="@+id/sku_3_price_title"
+                    android:textSize="20sp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_3_bill" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="350dp"
+                android:id="@+id/pkg_4"
+                android:layout_below="@id/pkg_3"
+
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginBottom="20dp"
+                android:weightSum="100"
+                android:background="@drawable/et_bg"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/sku_4_title"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_4_title" />
+
+                <TextView
+                    android:background="@drawable/save_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:paddingLeft="20dp"
+                    android:padding="5dp"
+                    android:id="@+id/sku_4_save"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_4_saving" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/sku_4_price_title"
+                    android:paddingRight="20dp"
+                    android:textSize="20sp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:text="@string/pkg_4_bill" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="350dp"
+                android:id="@+id/pkg_5"
+                android:layout_below="@id/pkg_4"
+
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginBottom="20dp"
+                android:weightSum="100"
+                android:background="@drawable/et_bg"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/sku_5_title"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="@string/vip" />
+
+                <TextView
+                    android:background="@drawable/save_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:paddingLeft="20dp"
+                    android:padding="5dp"
+                    android:id="@+id/sku_5_save"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:text="@string/vip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/sku_5_price_title"
+                    android:paddingRight="20dp"
+                    android:textSize="20sp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:text="@string/_5" />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:id="@+id/benfits_container"
+            android:layout_below="@id/pacage_container"
+
+            android:gravity="center_horizontal">
+
+            <RelativeLayout
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:id="@+id/benfits"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="Benefits of Premium"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_below="@+id/benfits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/benfit_1"
+                android:gravity="center"
+
+                >
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:id="@+id/check_box_1"
+                    >
+                <ImageView
+                    android:src="@drawable/green_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@+id/check_box_1"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:text="No Ads"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_below="@+id/benfit_1"
+                android:id="@+id/benfit_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                >
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:id="@+id/check_box_2"
+                    >
+                    <ImageView
+                        android:src="@drawable/green_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@+id/check_box_2"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:text="Unlimited Bandwidth"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/benfit_2"
+                android:id="@+id/benfit_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                >
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:id="@+id/check_box_3"
+                    >
+                    <ImageView
+                        android:src="@drawable/green_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@+id/check_box_3"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:text="Super-Fast Servers"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/benfit_3"
+                android:id="@+id/benfit_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                >
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:id="@+id/check_box_4"
+                    >
+                    <ImageView
+                        android:src="@drawable/green_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@+id/check_box_4"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:text="Premium Server Locations"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_below="@+id/benfit_4"
+                android:id="@+id/benfit_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                >
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:id="@+id/check_box_5"
+                    >
+                    <ImageView
+                        android:src="@drawable/green_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@+id/check_box_5"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:text="No time - Out"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

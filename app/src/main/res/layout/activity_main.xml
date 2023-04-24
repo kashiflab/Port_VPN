@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/container_body"
+        android:orientation="vertical"
+        android:background="@drawable/world_map2"
+        tools:context=".MainActivity">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:id="@+id/welcome_text_child"
+                android:paddingTop="60dp"
+                android:gravity="center_horizontal"
+
+
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:paddingLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/to_time"
+                    android:gravity="center_horizontal"
+
+                    android:paddingRight="20dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:id="@+id/mode_connected"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:text="Disconnected"
+                        android:layout_weight="40" />
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/lenaer"
+                    android:paddingRight="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:id="@+id/account_mode"
+                        android:textColor="@color/white"
+                        android:text="Account: Free"
+                        android:layout_weight="40" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:id="@+id/account_expiry"
+                        android:textColor="@color/white"
+                        android:text="Expire: 25 Sep 2019"
+                        android:layout_weight="40" />
+
+
+                    <TextView
+                        android:id="@+id/mode_of_user3"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/mode_of_user_r"
+                        android:padding="5dp"
+                        android:layout_weight="20"
+
+                        android:text="Signout"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mode_of_user_r"
+                    android:layout_below="@+id/lenaer"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/mode_of_user2"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="20sp"
+                    android:background="@drawable/et_bg"
+                    android:gravity="center_horizontal"
+                    android:hint="Choose Location"
+                    android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_weight="78"
+                android:layout_below="@+id/welcome_text_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+            </FrameLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/refresh_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="5dp"
+            app:fabSize="mini"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/reload_white"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/load_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:layout_gravity="center|top"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/dollar_white"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/disconnect_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:layout_gravity="center|top"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="90dp"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_sync_disabled_black_24dp"
+            />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/share_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginLeft="0dp"
+            app:fabSize="mini"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_share_w_24dp"
+            />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/rate_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginLeft="0dp"
+        app:fabSize="mini"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/ic_thumb_up_black_24dp"
+        />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/email_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top"
+            android:layout_marginBottom="0dp"
+            app:fabSize="mini"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_email_w_24dp"
+            />
+
+    </FrameLayout>

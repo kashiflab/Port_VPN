@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_bg_3"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/lQrOkay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvVpnState"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/state_connecting" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnManageState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:enabled="false"
+            android:text="@string/state_disconnected" />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChangeServer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:enabled="true"
+            android:text="@string/change_server" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCheckMyIP"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:enabled="true"
+            android:text="@string/check_my_ip"
+            app:backgroundTint="#0235D8" />
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

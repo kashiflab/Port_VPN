@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/login2bg"
+    tools:ignore="UnusedAttribute">
+
+    <TextView
+        android:id="@+id/textView_Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/contact_us"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/we_are_always_here_to_help_you"
+        android:textColor="@color/white"
+        android:layout_below="@id/textView_Number"
+        android:layout_marginTop="0dp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:background="#ebebeb"
+        app:cardCornerRadius="5dp"
+        android:backgroundTint="#ebebeb"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/subject"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Subject"
+                android:fontFamily="@font/montserrat"
+                android:textColorHint="#050505"
+                android:inputType="text"
+                app:met_floatingLabel="normal" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/email"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:fontFamily="@font/montserrat"
+                android:textColorHint="#050505"
+                android:inputType="textEmailAddress"
+                app:met_floatingLabel="normal" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/msg"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/montserrat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your message..."
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:textCursorDrawable="@null"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                app:met_floatingLabel="normal"
+                android:lines="4"
+                android:textColorHint="#050505"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:scrollHorizontally="false"
+                android:padding="@dimen/minpading"
+                android:gravity="top"/>
+
+            <Button
+                android:id="@+id/button_send2"
+                android:text="Send"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#009933"
+                android:backgroundTint="#050505"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/back_to_servers"
+                android:text="Back to Servers"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#009933"
+                android:backgroundTint="#050505"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

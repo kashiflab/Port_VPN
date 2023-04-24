@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@drawable/login2bg"
+    tools:context=".ChargePaystack"
+   >
+
+    <!-- Expiry Text for email address-->
+
+    <EditText
+        android:id="@+id/edit_email_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:hint="@string/email"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress" />
+    <!-- Expiry Text for credit card number-->
+
+    <View
+        android:id="@+id/horizontal_33divider"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/layout_expiry33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/edit_email_address"
+        android:layout_marginTop="8dp"
+
+
+        >
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:maxHeight="30dp"
+            android:maxWidth="30dp"
+            android:src="@drawable/visa"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/visa"
+
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/visa"
+            android:id="@+id/massss"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/mmmmmmmast"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <EditText
+        android:id="@+id/edit_card_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/layout_expiry33"
+        android:layout_marginTop="8dp"
+        android:hint="@string/card_number"
+        android:imeOptions="actionNext"
+        android:inputType="number" />
+
+    <!-- Divider-->
+    <View
+        android:id="@+id/horizontal_divider"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/layout_expiry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/edit_card_number"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/horizontal_divider"
+        android:layout_toStartOf="@id/horizontal_divider">
+
+        <!-- Expiry Text -->
+        <TextView
+            android:id="@+id/textview_expiry_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/expiry" />
+
+        <!-- EditText for expiry month -->
+        <EditText
+            android:id="@+id/edit_expiry_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_expiry_text"
+            android:hint="@string/expiry_month__mm"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxEms="4"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="8dp" />
+
+        <!-- EditText for expiry year -->
+        <EditText
+            android:id="@+id/edit_expiry_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_expiry_text"
+            android:layout_toEndOf="@id/edit_expiry_month"
+            android:layout_toRightOf="@id/edit_expiry_month"
+            android:hint="@string/yy"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxEms="4"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="8dp" />
+    </RelativeLayout>
+
+    <!-- layout for cvv -->
+    <RelativeLayout
+        android:id="@+id/layout_cvv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/edit_card_number"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/horizontal_divider"
+        android:layout_toRightOf="@id/horizontal_divider">
+
+        <!-- CVV text -->
+        <TextView
+            android:id="@+id/textview_cvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/cvv"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/cvv" />
+
+        <!-- EditText for cvv -->
+        <EditText
+            android:id="@+id/edit_cvv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_cvv"
+            android:imeOptions="actionDone"
+            android:inputType="numberPassword"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:padding="8dp"
+            />
+    </RelativeLayout>
+
+    <!--Pay Button -->
+    <Button
+        android:id="@+id/pay_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/btn_new"
+        android:text="@string/pay"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:layout_below="@id/layout_cvv"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/layout_secure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/pay_button"
+        android:layout_marginTop="8dp"
+
+        >
+
+
+        <TextView
+            android:id="@+id/details_are_safe"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/details_are_safe" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@+id/edit_card_number"
+        android:layout_alignEnd="@+id/edit_email_address"
+        app:srcCompat="@drawable/ic_lock_outline_black_24dp"
+        tools:ignore="VectorDrawableCompat"
+        android:layout_alignRight="@+id/edit_email_address" />
+
+</RelativeLayout>
+
+
+

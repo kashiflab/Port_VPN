@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/login2bg"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="UselessParent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:id="@+id/packagestv"
+        android:text="Packages"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:text="Buy packages &amp; explore more locations"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        app:contentPadding="10dp"
+        android:id="@+id/vipCD"
+        android:backgroundTint="#ebebeb"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:drawablePadding="10dp"
+                android:textSize="15sp"
+                android:id="@+id/sku_5_title"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="VIP Pack"
+                android:textStyle="bold"
+                android:textColor="#009933"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:fontFamily="@font/montserrat"
+                android:text="Start from"
+                android:id="@+id/sku_5_save"
+                android:textStyle="bold"
+                android:padding="2dp"
+                android:textSize="10sp"
+                android:textColor="#221f3b"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$450 USD"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:id="@+id/sku_5_price_title"
+            android:textSize="15sp"
+            android:textColor="#009933"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:id="@+id/rmpacktv"
+        android:text="Regular/Monthly Packages"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.cardview.widget.CardView
+        app:contentPadding="10dp"
+        android:id="@+id/weeklyCD"
+        android:backgroundTint="#ebebeb"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:drawablePadding="10dp"
+                android:textSize="15sp"
+                android:textColor="#009933"
+                android:id="@+id/sku_4_title"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Weekly Package"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:drawablePadding="10dp"
+                android:textSize="12sp"
+                android:id="@+id/sku_4_save"
+                android:fontFamily="@font/montserrat"
+                android:text="Test Drive"
+                android:textColor="#221f3b"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+        <TextView
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$20 USD"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:textColor="#009933"
+            android:textSize="15sp"
+            android:id="@+id/sku_4_price_title"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:contentPadding="10dp"
+        android:backgroundTint="#ebebeb"
+        android:id="@+id/monthlyCD"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:drawablePadding="10dp"
+                android:textSize="15sp"
+                android:textColor="#009933"
+                android:id="@+id/sku_1_title"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Monthly Package"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:drawablePadding="10dp"
+                android:textSize="12sp"
+                android:id="@+id/sku_1_save"
+                android:fontFamily="@font/montserrat"
+                android:text="Easy Ride"
+                android:textColor="#221f3b"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <TextView
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$60 USD"
+            android:id="@+id/sku_1_price_title"
+            android:layout_gravity="end"
+            android:textColor="#009933"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        app:contentPadding="10dp"
+        android:id="@+id/sixMonthCD"
+        android:backgroundTint="#ebebeb"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:drawablePadding="10dp"
+                android:textSize="15sp"
+                android:id="@+id/sku_2_title"
+                android:textColor="#009933"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="6 Month Package"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:drawablePadding="10dp"
+                android:textSize="12sp"
+                android:textColor="#221f3b"
+                android:fontFamily="@font/montserrat"
+                android:text="Save 15%"
+                android:id="@+id/sku_2_save"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/sku_2_price_title"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$50 USD"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:padding="2dp"
+            android:textSize="15sp"
+            android:textColor="#009933"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:contentPadding="10dp"
+        android:backgroundTint="#ebebeb"
+        android:id="@+id/yearCD"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:drawablePadding="10dp"
+                android:textSize="15sp"
+                android:textColor="#009933"
+                android:id="@+id/sku_3_title"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="1 Year"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:drawablePadding="10dp"
+                android:textSize="12sp"
+                android:id="@+id/sku_3_save"
+                android:textColor="#221f3b"
+                android:fontFamily="@font/montserrat"
+                android:text="Popular Choice"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/sku_3_price_title"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="$50 USD"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#009933"
+            android:padding="2dp"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/benfits_container"
+        android:layout_below="@id/pacage_container"
+
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:id="@+id/benfits"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="Benefits of Premium"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_below="@+id/benfits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/benfit_1"
+            android:gravity="center"
+
+            >
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:id="@+id/check_box_1"
+                >
+                <ImageView
+                    android:src="@drawable/green_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/check_box_1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="Multi-Devices"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/benfit_1"
+            android:id="@+id/benfit_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            >
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:id="@+id/check_box_2"
+                >
+                <ImageView
+                    android:src="@drawable/green_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/check_box_2"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="Unlimited Bandwidth"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/benfit_2"
+            android:id="@+id/benfit_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            >
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:id="@+id/check_box_3"
+                >
+                <ImageView
+                    android:src="@drawable/green_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/check_box_3"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="Super-Fast Servers"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/benfit_3"
+            android:id="@+id/benfit_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            >
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:id="@+id/check_box_4"
+                >
+                <ImageView
+                    android:src="@drawable/green_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/check_box_4"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="Premium Server Locations"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/benfit_4"
+            android:id="@+id/benfit_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            >
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:id="@+id/check_box_5"
+                >
+                <ImageView
+                    android:src="@drawable/green_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/check_box_5"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="No time - Out"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>

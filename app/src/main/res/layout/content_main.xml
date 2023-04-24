@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:alpha="0.9"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/settingslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="end">
+
+        <ImageButton
+            android:id="@+id/settingsbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_action_settings" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/settingslayout"
+        android:id="@+id/linearlayour"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginStart="5dp"
+                android:paddingStart="5dp"
+                android:layout_gravity="start"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_weight="1"
+                android:id="@+id/account_mode"
+                android:text="Account: Free"
+                android:textColor="#ebebeb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginEnd="5dp"
+                android:id="@+id/account_expiry"
+                android:paddingEnd="5dp"
+                android:textColor="#ebebeb"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:text="Expire: --:--:--"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/currentiptv"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="18sp"
+            android:textColor="#ebebeb"
+            android:layout_marginTop="20dp"
+            android:text="You're connected to:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/cptv"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"
+            android:textColor="#ebebeb"
+            android:textStyle="bold"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:gravity="center"
+            android:id="@+id/ipView"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"
+            android:textColor="#ebebeb"
+            android:textStyle="bold"
+            android:text=""
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearlayour2"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_gravity="center"
+            android:background="@null"
+            android:id="@+id/connectbtn"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/connect_tv"
+            android:fontFamily="@font/montserrat"
+            android:textSize="15sp"
+            android:textColor="#ebebeb"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="true"
+            android:text="Disconnected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/speedlayout"
+        android:layout_below="@id/linearlayour2"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:alpha="0.9"
+            android:background="@drawable/speedbuttonbg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/uploadtv"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat"
+                android:text="Upload"
+                android:drawablePadding="5dp"
+                android:textColor="#ebebeb"
+                android:drawableStart="@drawable/ic_action_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:alpha="0.9"
+            android:background="@drawable/speedbuttonbg"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/downloadtv"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:text="Download"
+                android:drawablePadding="5dp"
+                android:textColor="#ebebeb"
+                android:drawableStart="@drawable/ic_action_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:id="@+id/speedlayout2"
+        android:layout_below="@id/speedlayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/upspeedtv"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="0 kb/s"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="15sp"
+            android:textColor="#ebebeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/dwspeedtv"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="0 kb/s"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="15sp"
+            android:textColor="#ebebeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/speedlayout2"
+        android:weightSum="3"
+        android:id="@+id/mainBanner"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="visible"
+
+        android:orientation="horizontal">
+<!--        <com.google.android.gms.ads.AdView-->
+<!--            xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--            android:id="@+id/adView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            ads:adSize="BANNER"-->
+<!--            ads:adUnitId="ca-app-pub-2818856964974442/6230358081">-->
+<!--        </com.google.android.gms.ads.AdView>-->
+<!--        <com.appodeal.ads.BannerView-->
+<!--            android:id="@+id/appodealBannerView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:visibility="gone" />-->
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

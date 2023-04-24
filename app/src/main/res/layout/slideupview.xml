@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/bestlocationsbg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:id="@+id/slideView"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_weight="1.5"
+        android:layout_marginBottom="15dp"
+        android:text="Available Locations"
+        android:layout_gravity="start"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/slidinguparrow"
+            android:layout_gravity="end"
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/city_recyclerview"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:focusable="true"
+        android:clickable="true"
+        tools:listitem="@layout/item_vpn"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:context="com.google.samples.apps.sunflower.GardenActivity" />
+
+ </LinearLayout>
